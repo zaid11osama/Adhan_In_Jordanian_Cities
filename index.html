@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        :root{
+            --light-blue:#8ecae6;
+            --medium-blue:#219ebc ;
+            --dark-blue:#023047;
+            --yellow:#ffb703;
+            --orange:#fb8500;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-blue);
+            
+        }
+        .container{
+                padding-left: 30px;
+                padding-right: 30px;
+        }
+        hr{
+           border-color: white;
+        }
+        .container h2{
+            font-size: 90px;
+        text-align: center;
+        color: var(--light-blue);
+        }
+        @media (max-width:991px) {
+            .container h2{
+                font-size: 40px;
+            }
+            
+        }
+        .container p{
+            font-size: 50px;
+            font-weight: bold;
+            color: #777;
+            text-align: center;
+        }
+        @media (max-width:991px) {
+            .container p{
+                font-size: 30px;
+            }
+            
+        }
+        .boxes{
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-around;
+            
+        }
+        @media (max-width:991px) {
+            .boxes{
+                flex-direction: column;
+               
+                align-items: center;
+                
+            }
+            
+        }
+        .boxes .box{
+            border: 3px solid var(--medium-blue);
+            border-radius: 10px;
+            width: 170px;
+           
+        }
+        @media (max-width:991px) {
+            .boxes .box{
+                margin-bottom: 30px;
+                width: 80%;
+                
+            }
+            
+        }
+        .boxes .box .adhan{
+            margin: 30px 0;
+    padding: 60px 10px;
+    border-bottom: 3px solid var(--medium-blue);
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    color: var(--medium-blue);
+
+        }
+      
+        .boxes .box .time{
+            text-align: center;
+            font-weight: bold;
+            color: var(--orange);
+            font-size: 30px;
+        }
+        .selection{
+            display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    flex-wrap: wrap;
+        }
+        @media (max-width:991px) {
+            .selection{
+                flex-direction: column;
+               
+
+                
+            }
+            
+        }
+
+        .selection button{
+            border: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--orange);
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+        }
+        @media (max-width:991px) {
+            .selection button{
+               margin-top: 20px;
+                
+            }
+            
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <h2>Amman</h2>
+        <p class="date">Jumah- march 2024 15</p>
+        <hr>
+        <div class="boxes">
+            <div class="box">
+                <div class="adhan">AL-Fajer</div>
+                <div class="time" id="Fajr"></div>
+
+            </div>
+            <div class="box">
+                <div class="adhan">Alshorooq</div>
+                <div class="time" id="Sunrise"></div>
+
+            </div>
+            <div class="box">
+                <div class="adhan">Al-duhur</div>
+                <div class="time" id="Dhuhr"></div>
+
+            </div>
+            <div class="box">
+                <div class="adhan">Al-Asr</div>
+                <div class="time" id="Asr"></div>
+
+            </div>
+            <div class="box">
+                <div class="adhan">Al-Maghrib</div>
+                <div class="time" id="Maghrib"></div>
+
+            </div>
+
+            <div class="box">
+                <div class="adhan">Al-Ishaa</div>
+                <div class="time" id="Isha"></div>
+
+            </div>
+            
+
+        </div>
+
+        <div class="selection">
+
+            <button id="Amman">Amman</button>
+            <button id="Irbid">Irbid</button>
+            <button id="Jarash">Jarash</button>
+            <button id="Aqaba">Aqaba</button>
+            <button id="Salt">Salt</button>
+            <button id="Madaba">Madaba</button>
+            <button id="Karak">Karak</button>
+            <button id="Mafraq">Mafraq</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
