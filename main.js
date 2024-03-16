@@ -2,26 +2,11 @@
 
 
 
+
+
 window.onload =function(){ getTimesInAspecificMonthAndYearAndCityAndCountry("Amman")};
 
-function getUsersUsingAxios(){
 
-    
-    axios.get("https://jsonplaceholder.typicode.com/users")
-    .then((response)=>{
-        let users = response.data;
-
-        for(user of users){
-            console.log(user.name);
-            console.log(user.id);
-        }
-           
-    }).catch(error=>{
-        console.log(error );
-    })
-
-
-}
 
 function getYear(){
     var currentDate = new Date();

@@ -1,1 +1,0 @@
-# Adhan_In_Jordanian_Cities
